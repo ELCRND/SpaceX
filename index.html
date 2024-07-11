@@ -34,7 +34,9 @@
                 <a href="#">Play now</a>
             </h1>
             <picture>
-                <source srcset="public/img/home/home_logo.png" media="(max-width:1440px)" width="800" height="100">
+                <source srcset="public/img/home/home_logo_mobile.png" media="(max-width:779px)" width="335" height="50">
+                <source srcset="public/img/home/home_logo_laptop.png" media="(max-width:1440px)" width="800"
+                    height="100">
                 <img class="home__logo" src="public/img/home/home_logo.png" alt="" width="1350" height="170">
             </picture>
         </div>
@@ -81,15 +83,18 @@
         <div class="about__roadmap about-roadmap">
             <img class="about-roadmap__img" src="public/img/about/about_roadmap_link.png" alt="" width="330"
                 height="330" loading="lazy">
-            <h3 class="about-roadmap__title">Roadmap</h3>
-            <a class="about-roadmap__link" href="#roadmap">
-                <span>Learn more</span>
-                <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13.3231" cy="13.793" r="13.3231" fill="white" />
-                    <path d="M9.8031 17.7811L17.1719 9.94336M17.1719 9.94336H9.80311M17.1719 9.94336V17.7811"
-                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </a>
+
+            <div>
+                <h3 class="about-roadmap__title">Roadmap</h3>
+                <a class="about-roadmap__link" href="#roadmap">
+                    <span>Learn more</span>
+                    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13.3231" cy="13.793" r="13.3231" fill="white" />
+                        <path d="M9.8031 17.7811L17.1719 9.94336M17.1719 9.94336H9.80311M17.1719 9.94336V17.7811"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
         </div>
 
     </section>
@@ -207,7 +212,11 @@
 
             <div class="footer__bottom">
                 <div class="footer__logo">
-                    <img src="public/img/footer/footer_logo.png" alt="" width="210" height="30" loading="lazy">
+                    <picture>
+                        <source srcset="public/img/footer/footer_logo_mobile.png" media="(max-width:779px)" width="291"
+                            height="42">
+                        <img src="public/img/footer/footer_logo.png" alt="" width="210" height="30" loading="lazy">
+                    </picture>
                 </div>
                 <ol class="footer__navigation">
                     <li><a href="#home" class="footer__link">Home</a></li>

@@ -15,18 +15,23 @@
     grid-template-rows: 280px 404px;
     grid-template-columns: 1fr 680px 1fr;
   }
-
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1280px) {
     grid-template-rows: auto;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "title description"
+      "title title"
       "phone phone"
-      "telegram roadmap";
+      "description telegram"
+      "roadmap roadmap";
   }
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
+  @media screen and (max-width: 779px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "phone"
+      "description"
+      "telegram"
+      "roadmap";
   }
 }
 
@@ -40,7 +45,7 @@
     padding-top: 30px;
     padding-left: 40px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     padding: 30px;
     text-align: center;
   }
@@ -55,8 +60,11 @@
     @media screen and (max-width: 1440px) {
       font-size: 70px;
     }
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1280px) {
       max-width: 100%;
+    }
+    @media screen and (max-width: 779px) {
+      font-size: 32px;
     }
   }
 }
@@ -75,8 +83,7 @@
   @media screen and (max-width: 1440px) {
     padding-top: 27px;
   }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     padding: 30px;
   }
 
@@ -89,7 +96,8 @@
     @media screen and (max-width: 1440px) {
       font-size: 32px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 779px) {
+      font-size: 24px;
       text-align: center;
     }
   }
@@ -102,6 +110,12 @@
 
   @media screen and (max-width: 1440px) {
     padding: 30px;
+  }
+  @media screen and (max-width: 1280px) {
+    border-right: 1px solid #4d4d4d;
+  }
+  @media screen and (max-width: 779px) {
+    padding: 30px 20px;
   }
 
   .description__title {
@@ -125,7 +139,7 @@
       font-size: 15px;
     }
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1280px) {
       max-width: 100%;
     }
   }
@@ -173,13 +187,19 @@
   align-items: center;
   border-bottom: 1px solid #4d4d4d;
 
+  @media screen and (max-width: 1280px) {
+    padding: 30px;
+  }
+
   img {
     @media screen and (max-width: 1440px) {
       width: 286px;
       height: 286px;
     }
-    @media screen and (max-width: 768px) {
-      padding: 30px;
+
+    @media screen and (max-width: 1280px) {
+      width: 213px;
+      height: 213px;
     }
   }
 }
@@ -193,10 +213,15 @@
     padding: 27px;
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1280px) {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 50px;
+  }
+
+  @media screen and (max-width: 779px) {
+    flex-direction: column;
+    gap: 25px;
   }
 
   .about-roadmap__img {
@@ -208,9 +233,11 @@
       height: 240px;
       padding-left: 55px;
     }
-    @media screen and (max-width: 768px) {
-      width: 240px;
-      padding: 30px;
+    @media screen and (max-width: 1280px) {
+      width: 210px;
+      height: 210px;
+      padding: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -239,6 +266,14 @@
 
     @media screen and (max-width: 1440px) {
       font-size: 16px;
+      svg {
+        scale: 0.8;
+      }
+    }
+    @media screen and (max-width: 1280px) {
+      svg {
+        scale: 0.7;
+      }
     }
   }
 }

@@ -8,8 +8,11 @@
     padding-top: 40px;
     padding-bottom: 112px;
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1280px) {
     padding-bottom: 56px;
+  }
+  @media screen and (max-width: 779px) {
+    padding-top: 30px;
   }
 }
 
@@ -19,15 +22,23 @@
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
+
+  @media screen and (max-width: 1280px) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @media screen and (max-width: 779px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .roadmap__wrap {
   display: flex;
 
-  @media screen and (max-width: 1300px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
+  @media screen and (max-width: 1280px) {
+    justify-content: center;
   }
 }
 
@@ -39,9 +50,15 @@
 
   @media screen and (max-width: 1440px) {
     margin-bottom: 85px;
+    font-size: 70px;
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1280px) {
+    margin-bottom: 68px;
     text-align: center;
+  }
+  @media screen and (max-width: 779px) {
+    margin-bottom: 30px;
+    font-size: 32px;
   }
 }
 
@@ -56,15 +73,22 @@
   @media screen and (max-width: 1440px) {
     width: 60%;
     padding-left: 86px;
-    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 91px 95px;
   }
-
-  @media screen and (max-width: 1300px) {
-    padding-left: 20px;
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+    padding-left: 0;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    place-items: center;
+    gap: 60px 100px;
+  }
+  @media screen and (max-width: 779px) {
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+    place-items: start;
   }
 }
 
@@ -77,9 +101,14 @@
   @media screen and (max-width: 1440px) {
     font-size: 34px;
   }
+  @media screen and (max-width: 779px) {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
 }
 
 .schedule__list {
+  padding-left: 40px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -88,6 +117,11 @@
 
   @media screen and (max-width: 1440px) {
     font-size: 20px;
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: 779px) {
+    font-size: 18px;
   }
 
   li {
@@ -99,6 +133,16 @@
       top: 0;
       left: -10px;
       translate: -100% 0;
+
+      @media screen and (max-width: 1280px) {
+        scale: 0.8;
+        translate: -90% -10%;
+      }
+
+      @media screen and (max-width: 779px) {
+        scale: 0.7;
+        translate: -75% -15%;
+      }
     }
   }
 
@@ -119,8 +163,8 @@
       top: 113px;
     }
 
-    @media screen and (max-width: 1300px) {
-      position: static;
+    @media screen and (max-width: 1280px) {
+      display: none;
     }
   }
 }
