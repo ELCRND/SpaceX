@@ -284,6 +284,7 @@ body {
   color: #000;
   mix-blend-mode: screen;
   position: relative;
+  top: -3px;
   transition: background-color 200ms ease;
 }
 .home__title a:hover {
@@ -298,12 +299,14 @@ body {
     width: 107px;
     height: 41px;
     font-size: 18px;
+    top: -2px;
   }
 }
 @media screen and (max-width: 1280px) {
   .home__title a {
     width: 89px;
     height: 33px;
+    top: -1px;
   }
 }
 @media screen and (max-width: 779px) {
