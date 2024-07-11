@@ -425,6 +425,11 @@ body {
     padding: 30px;
   }
 }
+@media screen and (max-width: 779px) {
+  .about__phone {
+    gap: 0;
+  }
+}
 .about__phone span {
   font-size: 46px;
   line-height: 140%;
