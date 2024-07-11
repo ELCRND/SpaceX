@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+}
+
+.header__container {
+  width: min(487px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 80px;
+  font-size: 20px;
+  line-height: 105%;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1440px) {
+    gap: 60px;
+    font-style: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 40px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  a {
+    transition: color 200ms ease;
+    &:hover {
+      color: #c7c7c7;
+    }
+  }
+}

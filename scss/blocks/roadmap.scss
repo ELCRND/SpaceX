@@ -1,0 +1,126 @@
+.roadmap {
+  padding-top: 90px;
+  padding-bottom: 223px;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: 1440px) {
+    padding-top: 40px;
+    padding-bottom: 112px;
+  }
+  @media screen and (max-width: 1300px) {
+    padding-bottom: 56px;
+  }
+}
+
+.roadmap__container {
+  width: min(1800px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.roadmap__wrap {
+  display: flex;
+
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+}
+
+.roadmap__title {
+  margin-bottom: 166px;
+  font-size: 90px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1440px) {
+    margin-bottom: 85px;
+  }
+  @media screen and (max-width: 1300px) {
+    text-align: center;
+  }
+}
+
+.roadmap__schedule {
+  width: 50%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(293px, 1fr));
+  gap: 57px 99px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1440px) {
+    width: 60%;
+    padding-left: 86px;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 91px 95px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.schedule__date {
+  margin-bottom: 14px;
+  font-size: 44px;
+  line-height: 120%;
+  color: #ffb546;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 34px;
+  }
+}
+
+.schedule__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  line-height: 120%;
+
+  @media screen and (max-width: 1440px) {
+    font-size: 20px;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      content: url("../public/img/roadmap/cross_mark.png");
+      position: absolute;
+      top: 0;
+      left: -10px;
+      translate: -100% 0;
+    }
+  }
+
+  li.completed {
+    &::before {
+      content: url("../public/img/roadmap/completed_mark.png");
+    }
+  }
+}
+
+.roadmap__img {
+  img {
+    position: absolute;
+    top: 90px;
+    right: 90px;
+
+    @media screen and (max-width: 1440px) {
+      top: 113px;
+    }
+
+    @media screen and (max-width: 1300px) {
+      position: static;
+    }
+  }
+}

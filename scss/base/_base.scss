@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jockey+One&display=swap");
+
+@font-face {
+  font-family: "Porto 400";
+  src: url("../public/fonts/Porto 400.ttf");
+}
+
+:root {
+  --font-family: "Jockey One", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Porto 400", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: #fff;
+  background-color: #000;
+}
+
+.scroll-off {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.tooltip {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  translate: -50% 0;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  z-index: 21;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
